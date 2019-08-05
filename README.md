@@ -20,3 +20,8 @@ PYTHON_PREDICTION_MODELS
 Serves at a HTTP listener that returns the results of prediction models, Currently working on MLP and linear regression auto regressive models,
 will be implementing classification models and deep learning models when i get the time. 
 
+
+
+
+
+
