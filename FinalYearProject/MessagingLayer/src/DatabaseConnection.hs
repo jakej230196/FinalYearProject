@@ -50,7 +50,7 @@ databaseConnection = do
                          { SQL.connectHost =  "192.168.0.37" --- set Connection host
                          , SQL.connectUser = "Jake" --- Database User 
                          , SQL.connectPort = 3306
-                         , SQL.connectPassword = "K5m8Cr9JBlueBox1"
+                         , SQL.connectPassword = "_"
                          , SQL.connectDatabase = "tradingdata" --- Database Name      
                          }
                        return conn --- Return connection object
@@ -86,7 +86,7 @@ databaseConnection = do
                          { SQL.connectHost =  "fypjj256.database.windows.net" --- set Connection host
                          , SQL.connectPort =  1433
                          , SQL.connectUser = "jj256" --- Database User 
-                         , SQL.connectPassword = "K5m8Cr9j"
+                         , SQL.connectPassword = "_"
                          , SQL.connectDatabase = "HistoricalData" --- Database Name  
                          , SQL.connectOptions = [(ConnectTimeout 6000), (ClientIP "139.184.223.139")]     
                          }
