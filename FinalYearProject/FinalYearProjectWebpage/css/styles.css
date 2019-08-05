@@ -1,0 +1,223 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+    font-size: 17px;
+    background-color: #1F0318;
+}
+
+select {
+    font-family: Arial;
+}
+
+.nav {
+    background-color: #222;
+    border-bottom:1px solid black;
+
+}
+
+.nav_wrapper {
+    width: 100vw;
+    margin: 0 auto;
+    text-align: left;
+    margin-left:40vw;
+}
+
+.nav ul {
+    z-index: 999;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    min-width: 200px;
+}
+
+.nav ul li {
+    display: inline-block;
+}
+
+.nav ul li:hover {
+    background-color: #333;
+}
+
+.nav ul li a, visited {
+    color: #CCC;
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.nav ul li:hover ul {
+    display: block;
+}
+
+.nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    border: 5px solid #222;
+    border-top: 0;
+    margin-left: -5px;
+}
+
+.nav ul ul li {
+    display: block;
+}
+
+.nav ul ul li a:hover {
+    color: #699;
+}
+
+#pred_box {
+    width:80%;
+    height:100%;
+    background-color:red;
+    color:white;
+    float:left;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+
+
+#pred_display{
+    border-top: 1px solid grey;
+    width: 100%;
+    height:78%;
+}
+
+#top_half {
+    width:100vw;
+    height:46vh;
+    background-color:red;
+}
+
+#bot_half {
+    width:100vw;
+    height:46vh;  
+    background-color:#1F0318;
+}
+
+#chart_box {
+    width:58%;
+    height:100%;
+    background-color:#1F0318;;
+    color:white;
+    float:left;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+
+#options{
+    width:100%;
+    height:10%;
+}
+
+#chart_display{
+    border-top: 1px solid grey;
+    width: 100%;
+    height:78%;
+}
+
+#chart_options {
+    padding-top:10px;
+    margin-bottom:2%;
+    height:10%;
+    width:100%;
+}
+
+
+
+
+#chart_vals {
+    width:12%;
+    height:100%;
+    background-color:#1F0318;
+    color:white;
+    float:left;
+}
+
+#buy_orders {
+    width:15%;
+    height:100%;
+    max-height: 100%;
+    background-color:#1F0318;
+    float:left;
+    text-align: center;
+    color:green;
+    border: 1px solid grey;
+    overflow-y: auto;
+}
+
+#sell_orders {
+    width:15%;
+    height:100%;
+    max-height: 100%;
+    background-color:#1F0318;
+    float:left;
+    text-align: center;
+    color:red;
+    border: 1px solid grey;
+    border-right: 1px solid grey;
+    overflow-y: auto;
+}
+
+
+#chart_vals {
+    text-align: center;
+    border: 1px solid grey;
+    color:white;
+}
+
+
+.vals{
+    font-size:1em;
+}
+
+#high_price, 
+#low_price,
+#current_price,
+#moving_avg ,
+#exp_moving_avg,
+#_24_hour_volume,
+#trading_pair {
+    border-bottom: 1px solid grey;
+    padding:1px;
+}
+
+
+.table {
+    border: solid 1px grey;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 10px;
+}
+.table thead th {
+    border: solid 1px grey;
+    color: white;
+    text-align: left;
+}
+.table tbody td {
+    border: solid 1px grey;
+    padding: 10px;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0px 0 10px #353535; 
+
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #666; 
+    
+  }
+  
+  label {
+    -webkit-text-stroke: 1px #262B2F;
+}

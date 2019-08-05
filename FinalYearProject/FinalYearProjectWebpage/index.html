@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script src="https://code.iconify.design/1/1.0.0-rc6/iconify.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" media="all" href="./css/styles.css"/>
+        <title>FINAL YEAR PROJECT</title>
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Material Design Bootstrap -->
+        <link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
+
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="application/javascript" src="./index.js"></script>
+        <script type="application/javascript" src="./orderBook.js"></script>
+
+    </head>
+
+    <body>
+    
+      <div class="nav">
+          <div class="nav_wrapper">
+              <ul>
+                  <li><a href="#">item #1</a>
+                  </li>
+                  <li> <a href="#">item #2</a>
+                  </li>
+                  <li> <a href="#">dropdown #1</a>
+
+                      <ul>
+                          <li><a href="#">dropdown #1 item #1</a>
+                          </li>
+                          <li><a href="#">dropdown #1 item #2</a>
+                          </li>
+                          <li><a href="#">dropdown #1 item #3</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li> <a href="#">PAIRS</a>
+
+                    <ul>
+                        <li><a href="#" onclick="changeTradingPair('ETHUSDT')">ETH/USDT</a>
+                        </li>
+                        <li><a href="#" onclick="changeTradingPair('BTCUSDT')">BTC/USDT</a>
+                        </li>
+                        <li><a href="#" onclick="changeTradingPair('ADAUSDT')">ADA/USDT</a>
+                        </li>
+                    </ul>
+                </li>
+
+                  <ul>
+                      <li><a href="#">dropdown #2 item #1</a>
+                      </li>
+                      <li><a href="#">dropdown #2 item #2</a>
+                      </li>
+                      <li><a href="#">dropdown #2 item #3</a>
+                      </li>
+                  </ul>
+                </li>
+
+
+                <li> <a href="#">item #3</a>
+                </li>
+            </ul>
+        </div>
+        <!-- Nav wrapper end -->
+      
+
+
+        <div id="top_half">
+
+          <div id="chart_box">
+            <div id="chart_options">
+              <div style="float:left; margin-right:6px;margin-left:6px">No of candles: </div>
+              <input style="width: 100px; height:30px;color:black; text-align:center; float:left; margin-right:6px" type="text" class="form-control" id="num_of_candles" value="30">
+              <button onclick="updateCandles()">update</button>
+
+
+              
+              <select style="float:right; margin-right:6px;" id="slected_intervals" onchange="updateInterval()">
+                <option value="1m">1 minute</option>
+                <option value="3m">3 minute</option>
+                <option value="5m">5 minute</option>
+                <option value="15m">15 minute</option>
+                <option value="30m">30 minute</option>
+                <option value="1h" selected>1 hour</option>
+                <option value="2h">2 hour</option>
+                <option value="4h">4 hour</option>
+                <option value="6h">6 hour</option>
+                <option value="8h">8 hour</option>
+                <option value="12h">12 hour</option>
+                <option value="1d">1 day</option>
+                <option value="2d">2 day</option>
+                <option value="3d">3 day</option>
+                <option value="1w">1 week</option>
+              </select>
+              <div style="float:right; margin-right:6px;margin-left:6px">Intervals: </div>
+            </div>
+            <div id="chart_display">
+
+            </div>
+          </div>
+
+
+          <div id="chart_vals">
+            <div id="trading_pair">ETH/USDT</div>
+
+            <div class="vals">HIGH</div>
+            <div class="vals" id="high_price">loading..</div>
+
+            <div class="vals">LOW</div>
+            <div class="vals" id="low_price">loading..</div>
+
+            <div class="vals">CURRENT</div>
+            <div class="vals" id="current_price">loading..</div>
+
+            <div class="vals">MOVING AVG</div>
+            <div class="vals" id="moving_avg">loading..</div>
+
+            <div class="vals">EXP MOVING AVG</div>
+            <div class="vals" id="exp_moving_avg">loading..</div>
+
+
+            <div class="vals">24h VOLUME</div>
+            <div class="vals" id="_24_hour_volume">loading..</div>
+          </div>
+
+
+
+
+          <div id="buy_orders">
+            <div style="border-bottom: 1px solid grey;"><b>BUY ORDERS</b></div>
+            <table class="table" id="buy_order_table">
+              <thead>
+                  <tr>
+                      <th>Price</th>
+                      <th>QTY</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+
+
+                </tbody>
+            </table>
+          </div>
+
+
+          <div id="sell_orders">
+            <div style="border-bottom: 1px solid grey;"><b>SELL ORDERS</b></div>
+            <table class="table" id="sell_order_table">
+              <thead>
+                  <tr>
+                      <th>Price</th>
+                      <th>QTY</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+
+
+                </tbody>
+            </table>
+          </div>
+
+
+        </div>
+
+        <div id="bot_half">
+          <div id="pred_box">
+            
+
+            </div>
+          </div>
+          
+        </div>
+
+    </body>
+
+</html>
